@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 [ngClass]="{'text-decoration-line-through':!todo.active}">Name 	&rArr; {{todo.title}}</h5>
+      <p class="card-text">The Work You Have To Do 	&rArr; {{todo.desc}}</p>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onCheckBoxClick(todo)" [checked]="!todo.active">
+        <label class="form-check-label" for="todo{{i}}">Mark as done</label>
+      </div>
+      <button class="btn btn-danger"(click)="onClick(todo)">Delete</button>
+    </div>
+  </div>
+
+  
